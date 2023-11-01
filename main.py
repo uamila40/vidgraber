@@ -1,9 +1,10 @@
 from flask import Flask , request
-from flask_ngrok import run_with_ngrok
 import yt_dlp
 
 app = Flask(__name__)
-run_with_ngrok(app)
+
+# Yowza
+
 
 ydl_opts = {}
 
@@ -31,4 +32,4 @@ def reqest():
     return title
 
 if __name__ == "__main__":
-    app.run(port="5000")
+    app.run(debug=False, host='0.0.0.0')
